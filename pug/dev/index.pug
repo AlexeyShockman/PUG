@@ -1,0 +1,34 @@
+doctype html
+html(lang='ru')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        meta(rel='icon' type='image/x-icon' href='favicon.ico')
+
+        title some title
+
+        link(rel='stylesheet' href='./styles/header.css')
+
+    body
+        mixin btn(text)
+            li.header-text= text
+        mixin icon(name)
+            img(src=`src/${name}.svg`)
+        header.header
+            .header-logo
+                img(src='src/logo.png')
+            .header-production
+                img(src='src/menu.svg')/ продукция
+            ul.header-other
+                - let headerOther = ['о компании', 'услуги', 'дилерам', 'контакты', 'доставка и оплата']
+                each elem in headerOther
+                    //li.header-text= elem
+                    +btn(elem)
+            .header-schedule
+                a(href="tel:+78005055955") +7(800) 505-59-55
+                .header-gray-text Пн-Пт 9:00 - 18:00
+            .header-icons
+                - let images = ['user', 'basket', 'graph', 'like']
+                each img in images
+                    //img(src=`src/${img}.svg`)
+                    +icon(img)
