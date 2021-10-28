@@ -104,6 +104,7 @@ a[href^="tel:"] {
     display: flex;
     flex-direction: column;
     gap: 64px;
+
 }
 .search{
     display: flex;
@@ -174,10 +175,12 @@ hr {
     line-height: 24px;
     font-weight: 400;
 }
+
 .catalog,
 .catalog-cards{
     display: flex;
     gap: 32px;
+    flex-wrap: wrap;
 }
 
 .catalog{
@@ -191,7 +194,8 @@ hr {
 .catalog-card{
     display: flex;
     border: 1px solid #EEEEEE;
-    flex-basis: 48.5%;
+    flex-basis: 45%;
+    flex-grow: 1;
 }
 .card-img{
     padding: 0px 23px;
@@ -213,6 +217,10 @@ hr {
     display: flex;
     flex-direction: column;
     padding: 24px 32px;
+    justify-content: space-between;
+}
+.card-text.small-card{
+
 }
 .card-text-list{
     display: flex;

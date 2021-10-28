@@ -1,0 +1,25 @@
+header.header
+    .header-logo
+        img(src='src/logo.png')
+    .header-production
+        img(src='src/menu.svg')/ продукция
+    ul.header-other
+        - let headerOther = ['о компании', 'услуги', 'дилерам', 'контакты', 'доставка и оплата']
+        each elem in headerOther
+            //li.header-text= elem
+            +btn(elem)
+    .header-schedule
+        a(href="tel:+78005055955") +7(800) 505-59-55
+        .header-gray-text Пн-Пт 9:00 - 18:00
+    .header-icons
+        - let images = ['user', 'basket', 'graph', 'like']
+        each img in images
+            +icon(img)
+
+
+form.search
+    input.search-input(placeholder='Поиск')
+    button.search-btn
+        img(src=`src/magnifier.svg`)
+
+

@@ -13,45 +13,8 @@ html(lang='ru')
         link(href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800;900&display=swap\" rel=\"stylesheet" rel="stylesheet")
 
     body
-        mixin btn(text)
-            li.header-text= text
-        mixin icon(name)
-            img(src=`src/${name}.svg`)
-        mixin catalogCard(title, url, imgName, ...text)
-            .catalog-card
-                .card-img
-                    img(src=`src/cards/${imgName}.png`)
-                .card-text
-                    h2.card-text-title= title
-                    .card-text-list
-                        if (text > 0)
-                        each string in text
-                            a.card-text-a(href=`${url}`)= string
-                    a.card-btn(href=`https://www.google.ru/`) показать все
-        header.header
-            .header-logo
-                img(src='src/logo.png')
-            .header-production
-                img(src='src/menu.svg')/ продукция
-            ul.header-other
-                - let headerOther = ['о компании', 'услуги', 'дилерам', 'контакты', 'доставка и оплата']
-                each elem in headerOther
-                    //li.header-text= elem
-                    +btn(elem)
-            .header-schedule
-                a(href="tel:+78005055955") +7(800) 505-59-55
-                .header-gray-text Пн-Пт 9:00 - 18:00
-            .header-icons
-                - let images = ['user', 'basket', 'graph', 'like']
-                each img in images
-                    +icon(img)
-
-
-        form.search
-            input.search-input(placeholder='Поиск')
-            button.search-btn
-                img(src=`src/magnifier.svg`)
-
+        include modules/mixins.pug
+        include modules/header.pug
 
         .main
             .stage
@@ -67,6 +30,8 @@ html(lang='ru')
                     +catalogCard ('Полименрные материалы: капролон, полиамид 6, полиамид 66, полиацеталь, полиэтилен, полипропилен, ПВХ, РЕЕК, PPSU', 'https://www.google.ru/', 'card2', 'текст 1', 'текст 2')
                     +catalogCard ('Комплектующие для баков', 'https://www.google.ru/', 'card3', '')
                     +catalogCard ('Комплектующие для баков', '', 'card4')
+                    +catalogCard ('Комплектующие для баков', '', 'card4')
+
 
 
 
