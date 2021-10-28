@@ -219,9 +219,7 @@ hr {
     padding: 24px 32px;
     justify-content: space-between;
 }
-.card-text.small-card{
 
-}
 .card-text-list{
     display: flex;
     flex-direction: column;

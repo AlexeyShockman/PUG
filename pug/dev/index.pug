@@ -13,6 +13,7 @@ html(lang='ru')
         link(href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800;900&display=swap\" rel=\"stylesheet" rel="stylesheet")
 
     body
+        include modules/data.pug
         include modules/mixins.pug
         include modules/header.pug
 
@@ -25,15 +26,6 @@ html(lang='ru')
             .catalog
                 h2 Каталог
                 .catalog-cards
-                    +catalogCard ('Изделия ротационного формирования', 'https://www.google.ru/', 'card1', 'текст 1', 'текст 2', 'текст 3', 'текст 4', 'card1', 'текст 1', 'текст 2', 'текст 3', 'текст 4', 'card1', 'текст 1', 'текст 2', 'текст 3', 'текст 4')
-                    +catalogCard ('Изделия ротационного формирования', 'https://www.google.ru/', 'card1', 'текст 1', 'достаточно длинный текст чтобы занимать больше чем одну строку', 'текст 2', 'текст 3', 'текст 4', 'текст 2', 'текст 3', 'текст 4', 'текст 2', 'текст 3', 'текст 4')
-                    +catalogCard ('Полименрные материалы: капролон, полиамид 6, полиамид 66, полиацеталь, полиэтилен, полипропилен, ПВХ, РЕЕК, PPSU', 'https://www.google.ru/', 'card2', 'текст 1', 'текст 2')
-                    +catalogCard ('Комплектующие для баков', 'https://www.google.ru/', 'card3', '')
-                    +catalogCard ('Комплектующие для баков', '', 'card4')
-                    +catalogCard ('Комплектующие для баков', '', 'card4')
-
-
-
-
-
+                    each elem in cardList
+                        +catalogCard(elem)
 

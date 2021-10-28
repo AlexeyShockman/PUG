@@ -4,7 +4,12 @@ mixin btn(text)
 mixin icon(name)
     img(src=`src/${name}.svg`)
 
-mixin catalogCard(title, url, imgName, ...text)
+mixin catalogCard(arr)
+    -
+     let title = arr[0];
+     let url = arr[1];
+     let imgName = arr[2];
+     let text = arr.slice(3)
     .catalog-card
         .card-img
             img(src=`src/cards/${imgName}.png`)
@@ -16,10 +21,3 @@ mixin catalogCard(title, url, imgName, ...text)
                     a.card-text-a(href=`${url}`)= string
             a.card-btn(href=`https://www.google.ru/`) показать все
 
-//mixin catalogSmallCard(title, url, imgName, ...text)
-//    .catalog-card
-//        .card-img
-//            img(src=`src/cards/${imgName}.png`)
-//        .card-text.small-card
-//            h2.card-text-title= title
-//            a.card-btn(href=`https://www.google.ru/`) показать все
