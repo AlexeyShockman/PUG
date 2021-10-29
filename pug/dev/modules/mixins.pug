@@ -6,10 +6,7 @@ mixin icon(name)
 
 mixin catalogCard(arr)
     -
-     let title = arr[0];
-     let url = arr[1];
-     let imgName = arr[2];
-     let text = arr.slice(3)
+     let [title, url, imgName, ...text] = arr;
     .catalog-card
         .card-img
             img(src=`src/cards/${imgName}.png`)
