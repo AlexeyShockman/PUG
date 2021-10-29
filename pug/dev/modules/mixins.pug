@@ -11,10 +11,43 @@ mixin catalogCard(arr)
         .card-img
             img(src=`src/cards/${imgName}.png`)
         .card-text
-            h2.card-text-title= title
-            .card-text-list
-                if (text > 0)
-                each string in text
-                    a.card-text-a(href=`${url}`)= string
+            .card-text-wrap
+                h2.card-text-title= title
+                .card-text-list
+                    if (text > 0)
+                    each string in text
+                        a.card-text-a(href=`${url}`)= string
             a.card-btn(href=`https://www.google.ru/`) показать все
+
+mixin novelty(cards)
+    -
+     let {id, stars, text, imgName} = cards
+    .novelty-card
+        .novelty-card-top
+            .novelty-card-top-left
+                span Арктикул:
+                    span=`${id}`
+                .novelty-card-top-left-stars
+                    - let i = 0;
+                    while i < stars
+                        img(src='src/filledStar.svg' alt=`${i++}`)
+                    - i = 0;
+                    while i < 5-stars
+                        img(src='src/star.svg' alt=`${i++}`)
+            .novelty-card-top-right
+                img(src=`src/graph.svg`)
+                img(src=`src/like.svg`)
+        .novelty-card-body-img
+            img(src=`src/${imgName}.png`)
+        .novelty-card-body-text=text
+        .novelty-card-body-buttons
+            .novelty-card-body-buttons-counter
+                div -
+                div 1
+                div +
+            button.novelty-card-body-buttons-basket
+                img(src='src/whiteBasket.svg')
+                .novelty-card-body-buttons-basket-text в корзину
+
+
 
