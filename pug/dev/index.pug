@@ -33,7 +33,42 @@ html(lang='ru')
                 .storey-cards
                     each elem in storeyCard
                         +novelty(elem)
+            .stretching
+                .stretching-text Производство пластмассовых изделий: пластиковые емкости, баки, контейнеры, септики.
+            .storey
+                h2 Популярные товары
+                .storey-cards
+                    each elem in storeyCard
+                        +novelty(elem)
+            .news
+                h2 Новости
+                .news-cards
+                    each elem in newsCards
+                        +news(elem)
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+    script.
+        let cardButtons = document.querySelectorAll('.novelty-card-body-buttons-counter');
+        cardButtons.forEach(function (element) {
+            let x = element.querySelectorAll('div');
+            x[0].addEventListener('click', function () {
+                if (x[1].innerText > 1) {
+                    x[1].innerText--
+                }
+            });
+            x[2].addEventListener('click', function () {
+                x[1].innerText++
+            });
+        })

@@ -49,5 +49,16 @@ mixin novelty(cards)
                 img(src='src/whiteBasket.svg')
                 .novelty-card-body-buttons-basket-text в корзину
 
+mixin news(card)
+    -
+        let {img, title, text} = card
+    .news-card
+        .news-card-img
+            img(src=`src/${img}.jpg`)
+        .news-card-body
+            .news-card-body-title=`${title}`
+            .news-card-body-text=`${text}`
+
+
 
 
