@@ -57,7 +57,7 @@ header img{
     color: #828282;
 }
 
-a[href^="tel:"] {
+.header-schedule>a[href^="tel:"] {
     text-decoration: none;
     height: 40px;
     border-bottom: 1px dashed #828282;
@@ -111,12 +111,12 @@ a[href^="tel:"] {
 }
 
 .main > div{
-    margin: 0px 186px;
+    margin: 0px 240px;
 }
 .search{
     display: flex;
     height: 54px;
-    margin: 16px 186px;
+    margin: 16px 240px;
 }
 
 .search-input{
@@ -187,7 +187,8 @@ hr {
 }
 
 .storey,
-.catalog-cards{
+.catalog-cards,
+.news{
     display: flex;
     gap: 32px;
     flex-wrap: wrap;
@@ -354,20 +355,108 @@ hr {
     font-weight: 600;
 }
 
+
 .news-cards{
     display: flex;
     gap: 32px;
+    flex-wrap: wrap;
 }
 .news-card{
     border: 1px solid #EEEEEE;
     padding: 16px;
+    flex-basis: 45%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.news-card-img > img{
+    object-fit: fill ;
+    width: 100%;
+    height: 100%;
+}
+
+.news-card-body-title{
+    margin: 24px 0px 16px 0px;
+}
+
+.news-card-body-text{
+    font-size: 15px;
+    line-height: 22px;
+    max-height: 88px;
+}
+
+.news-card-body-text::after{
+    content: "подробнее";
+    margin: 0px 10px;
+    color: #0073c3;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.news-button{
+    background-color: #0073C3;
+    width: 300px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    line-height: 32px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    justify-content: center;
+    margin: auto;
+}
+
+
+.footer{
+    background-color: #F8F8F8;
+    margin-top: 64px;
+}
+.footer > div {
+    padding: 0px 240px;
+    border-top: 1px solid #EEEEEE;
+}
+
+.footer-upside{
+    display: flex;
+}
+
+.footer-upside > div:not(:last-child){
+    border-right: 1px solid #EEEEEE;
+}
+
+.footer-upside-left{
     flex-basis: 50%;
+    padding: 32px 56px 32px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.footer-upside-right{
+    flex-basis: 50%;
+    padding: 32px 0px 32px 56px;
+}
+
+.footer-upside-left-telephones{
     display: flex;
     flex-direction: column;
 }
 
+.footer-upside-left-telephone{
+    font-size: 32px;
+    line-height: 38px;
+    font-weight: 700;
+    text-decoration: none;
+    flex-basis: 100%;
+}
 
-
+.footer-upside-left-texts{
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+}
 
 
 

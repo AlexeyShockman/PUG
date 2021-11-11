@@ -1,0 +1,23 @@
+footer.footer
+    .footer-upside
+        .footer-upside-left
+            .footer-upside-left-telephones
+                a(href="tel:+74959892995").footer-upside-left-telephone +7 (495) 989-29-95
+                a(href="tel:+78005055955").footer-upside-left-telephone +7 (800) 505-59-55
+            .footer-upside-left-texts
+                p © 2003-2020 Все права принадлежат ООО «АНИОН». Ссылка при копировании, цитировании, перепечатке любого фрагмента текста, изображения, скачиваемого документа обязательна.
+                p Вся информация, представленная на сайте, носит ознакомительный характер, и не является офертой в понимании ст. 435 ГК РФ.
+        .footer-upside-right
+            .footer-upside-right-menu
+                each item in footerMenu
+                    .footer-upside-right-menu-item=`${item}`
+            .footer-upside-right-other
+                .footer-upside-right-other-logo
+                .footer-upside-right-other-link
+                .footer-upside-right-other-adress
+                .footer-upside-right-other-social
+                    each img in footerIcons
+                        +icon(img)
+    .footer-downside
+        p Разработка сайта –
+        img

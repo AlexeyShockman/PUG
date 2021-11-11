@@ -17,6 +17,7 @@ html(lang='ru')
         include modules/mixins.pug
         include modules/header.pug
 
+
         .main
             .stage
                 .stage-text
@@ -45,11 +46,12 @@ html(lang='ru')
                 .news-cards
                     each elem in newsCards
                         +news(elem)
+                button.news-button Все новости
 
 
 
 
-
+        include modules/footer.pug
 
 
 
@@ -71,4 +73,16 @@ html(lang='ru')
             x[2].addEventListener('click', function () {
                 x[1].innerText++
             });
-        })
+        });
+        (function () {
+            let lengthSize = 254;
+            let character = ' ...';
+            let newsStrings = document.querySelectorAll('.news-card-body-text');
+            newsStrings.forEach(function (element) {
+                string = element.innerText;
+                if (string.length > lengthSize) {
+                    element.innerText = string.slice(0, lengthSize) + character
+                }
+            })
+        }());
+

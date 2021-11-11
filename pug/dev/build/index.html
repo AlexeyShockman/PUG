@@ -293,21 +293,54 @@
               <div class="news-card">
                 <div class="news-card-img"><img src="src/news1.jpg"></div>
                 <div class="news-card-body">
-                  <div class="news-card-body-title">Режим работы в период повышенной готовности </div>
-                  <div class="news-card-body-text">ООО «АНИОН» продолжает свою деятельность в период повышенной готовности в соответствии с Указам Президента Российской Федерации от 02.04.2020 г. № 239 &quot;О мерах по обеспечению санитарно-эпидемиологического благополучия населения на территории РФ в связи с ...</div>
+                  <h2 class="news-card-body-title">Режим работы в период повышенной готовности </h2>
+                  <p class="news-card-body-text">ООО «АНИОН» продолжает свою деятельность в период повышенной готовности в соответствии с Указам Президента Российской Федерации от 02.04.2020 г. № 239 &quot;О мерах по обеспечению санитарно-эпидемиологического благополучия населения на территории РФ в связи с 123</p>
                 </div>
               </div>
               <div class="news-card">
                 <div class="news-card-img"><img src="src/news2.jpg"></div>
                 <div class="news-card-body">
-                  <div class="news-card-body-title">График работы ООО «Анион» в новогодние праздники 2021</div>
-                  <div class="news-card-body-text">Коллектив компании &quot;АНИОН&quot; поздравляет Вас с Новым Годом и Рождеством!
-Пусть осуществится все задуманное и запланированное! Пусть год будет плодотворным и продуктивным. Желаем Вам интересных, успешных новых проектов, надежных партнеров, понимания ...</div>
+                  <h2 class="news-card-body-title">График работы ООО «Анион» в новогодние праздники 2021</h2>
+                  <p class="news-card-body-text">Коллектив компании &quot;АНИОН&quot; поздравляет Вас с Новым Годом и Рождеством!
+Пусть осуществится все задуманное и запланированное! Пусть год будет плодотворным и продуктивным. Желаем Вам интересных, успешных новых проектов, надежных партнеров, понимания ...</p>
                 </div>
               </div>
         </div>
+        <button class="news-button">Все новости</button>
       </div>
     </div>
+    <footer class="footer">
+      <div class="footer-upside">
+        <div class="footer-upside-left">
+          <div class="footer-upside-left-telephones"><a class="footer-upside-left-telephone" href="tel:+74959892995">+7 (495) 989-29-95</a><a class="footer-upside-left-telephone" href="tel:+78005055955">+7 (800) 505-59-55</a></div>
+          <div class="footer-upside-left-texts">
+            <p>© 2003-2020 Все права принадлежат ООО «АНИОН». Ссылка при копировании, цитировании, перепечатке любого фрагмента текста, изображения, скачиваемого документа обязательна.</p>
+            <p>Вся информация, представленная на сайте, носит ознакомительный характер, и не является офертой в понимании ст. 435 ГК РФ.</p>
+          </div>
+        </div>
+        <div class="footer-upside-right">
+          <div class="footer-upside-right-menu">
+            <div class="footer-upside-right-menu-item">о компании</div>
+            <div class="footer-upside-right-menu-item">как купить</div>
+            <div class="footer-upside-right-menu-item">продукция</div>
+            <div class="footer-upside-right-menu-item">дилерам</div>
+            <div class="footer-upside-right-menu-item">услуги</div>
+            <div class="footer-upside-right-menu-item">контакты</div>
+            <div class="footer-upside-right-menu-item">доставка и оплата</div>
+          </div>
+          <div class="footer-upside-right-other">
+            <div class="footer-upside-right-other-logo"></div>
+            <div class="footer-upside-right-other-link"></div>
+            <div class="footer-upside-right-other-adress"></div>
+            <div class="footer-upside-right-other-social"><img src="src/vk.svg"><img src="src/fb.svg"><img src="src/yt.svg"><img src="src/ig.svg"><img src="src/tw.svg">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-downside">
+        <p>Разработка сайта –</p><img>
+      </div>
+    </footer>
   </body>
   <script>
     let cardButtons = document.querySelectorAll('.novelty-card-body-buttons-counter');
@@ -321,6 +354,17 @@
         x[2].addEventListener('click', function () {
             x[1].innerText++
         });
-    })
+    });
+    (function () {
+        let lengthSize = 254;
+        let character = ' ...';
+        let newsStrings = document.querySelectorAll('.news-card-body-text');
+        newsStrings.forEach(function (element) {
+            string = element.innerText;
+            if (string.length > lengthSize) {
+                element.innerText = string.slice(0, lengthSize) + character
+            }
+        })
+    }());
   </script>
 </html>
