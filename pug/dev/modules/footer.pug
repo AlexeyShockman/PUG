@@ -9,12 +9,11 @@ footer.footer
                 p Вся информация, представленная на сайте, носит ознакомительный характер, и не является офертой в понимании ст. 435 ГК РФ.
         .footer-upside-right
             .footer-upside-right-menu
-                each item in footerMenu
-                    .footer-upside-right-menu-item=`${item}`
+                +footerDoubleColumnMenu(footerMenu)
             .footer-upside-right-other
-                .footer-upside-right-other-logo
-                .footer-upside-right-other-link
-                .footer-upside-right-other-adress
+                img.footer-upside-right-other-logo(src='src/footerLogo.svg')
+                .footer-upside-right-other-link sale@anion-msk.ru
+                .footer-upside-right-other-adress Москва, Муравская ул., д. 1
                 .footer-upside-right-other-social
                     each img in footerIcons
                         +icon(img)

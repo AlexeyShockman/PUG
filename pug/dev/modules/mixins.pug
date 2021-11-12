@@ -59,6 +59,26 @@ mixin news(card)
             h2.news-card-body-title=`${title}`
             p.news-card-body-text=`${text}`
 
+mixin footerDoubleColumnMenu(array)
+    -
+        let column1 = [], column2 = [];
+        array.forEach(function(elem, index) {
+            if (index % 2 === 0) {
+                column1.push(elem);
+            } else {
+                column2.push(elem)
+            }
+        })
+    .footer-upside-right-menu-column
+        each item in column1
+            .footer-upside-right-menu-item=`${item}`
+    .footer-upside-right-menu-column
+        each item in column2
+            .footer-upside-right-menu-item=`${item}`
+
+
+
+
 
 
 

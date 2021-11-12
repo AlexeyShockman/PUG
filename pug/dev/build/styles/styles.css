@@ -363,8 +363,8 @@ hr {
 }
 .news-card{
     border: 1px solid #EEEEEE;
-    padding: 16px;
-    flex-basis: 45%;
+    padding: 24px 32px;
+    flex-basis: 20%;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -434,11 +434,6 @@ hr {
     gap: 32px;
 }
 
-.footer-upside-right{
-    flex-basis: 50%;
-    padding: 32px 0px 32px 56px;
-}
-
 .footer-upside-left-telephones{
     display: flex;
     flex-direction: column;
@@ -457,6 +452,34 @@ hr {
     flex-direction: column;
     gap: 19px;
 }
+
+.footer-upside-right{
+    flex-basis: 50%;
+    padding: 32px 0px 32px 56px;
+    display: flex;
+}
+
+.footer-upside-right-menu{
+    display: flex;
+    gap: 40px;
+}
+.footer-upside-right-menu-column{
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+}
+
+.footer-upside-right-menu-item{
+    font-size: 15px;
+    line-height: 18px;
+
+
+}
+
+.footer-upside-right-other{
+    flex-basis: 50%;
+}
+
 
 
 
