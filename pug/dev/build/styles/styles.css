@@ -413,7 +413,7 @@ hr {
     background-color: #F8F8F8;
     margin-top: 64px;
 }
-.footer > div {
+.footer-upside {
     padding: 0px 240px;
     border-top: 1px solid #EEEEEE;
 }
@@ -453,10 +453,15 @@ hr {
     gap: 19px;
 }
 
+.footer-upside-left-texts > p {
+    color: #BABABA;
+}
+
 .footer-upside-right{
     flex-basis: 50%;
     padding: 32px 0px 32px 56px;
     display: flex;
+    gap: 120px;
 }
 
 .footer-upside-right-menu{
@@ -477,9 +482,60 @@ hr {
 }
 
 .footer-upside-right-other{
-    flex-basis: 50%;
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
 }
 
+.footer-upside-right-other-logo{
+    width: 106px;
+    height: 32px;
+}
 
+.footer-upside-right-other-link{
+    color:#0073C3;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 27px;
+    text-decoration: none;
+}
 
+.footer-upside-right-other-adress{
+    line-height: 27px;
+    font-size: 16px;
+    font-weight: 400;
+
+}
+
+.footer-upside-right-other-social{
+    padding: 12px 0px;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-upside-right-other-social > img{
+    width: 30px;
+    height: 30px;
+}
+
+.footer-downside{
+    display: flex;
+    padding: 32px 240px;
+    border-top: 1px solid #EEEEEE;
+
+}
+
+.footer-downside > p{
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #BABABA;
+;
+}
+
+.footer-downside > img {
+    width: 108px;
+    height: 22px;
+    padding: 0px 8px;
+}
 

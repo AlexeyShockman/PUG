@@ -11,12 +11,12 @@ footer.footer
             .footer-upside-right-menu
                 +footerDoubleColumnMenu(footerMenu)
             .footer-upside-right-other
-                img.footer-upside-right-other-logo(src='src/footerLogo.svg')
-                .footer-upside-right-other-link sale@anion-msk.ru
+                img.footer-upside-right-other-logo(src='src/footerLogo.png')
+                a.footer-upside-right-other-link(href='sale@anion-msk.ru') sale@anion-msk.ru
                 .footer-upside-right-other-adress Москва, Муравская ул., д. 1
                 .footer-upside-right-other-social
                     each img in footerIcons
                         +icon(img)
     .footer-downside
         p Разработка сайта –
-        img
+        img(src='src/letsrockLogo.svg')
