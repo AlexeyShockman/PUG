@@ -1,19 +1,40 @@
 header.header
-    .header-logo
-        img(src='src/logo.png')
-    .header-production
-        img(src='src/menu.svg')/ продукция
-    ul.header-other
-        each elem in headerOther
-            +btn(elem)
-    .header-schedule
-        a(href="tel:+78005055955") +7(800) 505-59-55
-        .header-gray-text Пн-Пт 9:00 - 18:00
-    .header-icons
-        each img in headerImages
-            +icon(img)
+    .header-pc
+        .header-logo
+            img(src='src/logo.png')
+        .header-production
+            img(src='src/menu.svg')/
+            p продукция
+        ul.header-other
+            each elem in headerOther
+                +btn(elem)
+        .header-schedule
+            a(href="tel:+78005055955") +7(800) 505-59-55
+            .header-gray-text Пн-Пт 9:00 - 18:00
+        .header-icons
+            each img in headerImages
+                +icon(img)
+
+    .header-mobile
+        .header-top
+            .header-schedule
+                a(href="tel:+78005055955") +7(800) 505-59-55
+            .header-icons
+                each img in headerImages
+                    if img!=='basket'
+                        +icon(img)
+        .header-middle
+            .header-menu
+                img(src='src/menu-m.png')
+            .header-logo
+                img(src='src/logo-m.png')/
+            .header-bucket
+                each img in headerImages
+                    if img === 'basket'
+                        +icon(img)
 
 form.search
     input.search-input(placeholder='Поиск')
     button.search-btn
         img(src=`src/magnifier.svg`)
+

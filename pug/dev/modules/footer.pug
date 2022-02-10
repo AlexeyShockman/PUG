@@ -1,22 +1,44 @@
 footer.footer
-    .footer-upside
-        .footer-upside-left
-            .footer-upside-left-telephones
-                a(href="tel:+74959892995").footer-upside-left-telephone +7 (495) 989-29-95
-                a(href="tel:+78005055955").footer-upside-left-telephone +7 (800) 505-59-55
-            .footer-upside-left-texts
-                p © 2003-2020 Все права принадлежат ООО «АНИОН». Ссылка при копировании, цитировании, перепечатке любого фрагмента текста, изображения, скачиваемого документа обязательна.
-                p Вся информация, представленная на сайте, носит ознакомительный характер, и не является офертой в понимании ст. 435 ГК РФ.
-        .footer-upside-right
-            .footer-upside-right-menu
-                +footerDoubleColumnMenu(footerMenu)
-            .footer-upside-right-other
-                img.footer-upside-right-other-logo(src='src/footerLogo.png')
-                a.footer-upside-right-other-link(href='sale@anion-msk.ru') sale@anion-msk.ru
-                .footer-upside-right-other-adress Москва, Муравская ул., д. 1
-                .footer-upside-right-other-social
-                    each img in footerIcons
-                        +icon(img)
-    .footer-downside
-        p Разработка сайта –
-        img(src='src/letsrockLogo.svg')
+    .footer-pc
+        .footer-upside
+            .footer-upside-left
+                .footer-upside-left-telephones
+                    a(href="tel:+74959892995").footer-upside-left-telephone +7 (495) 989-29-95
+                    a(href="tel:+78005055955").footer-upside-left-telephone +7 (800) 505-59-55
+                .footer-upside-left-texts
+                    p © 2003-2020 Все права принадлежат ООО «АНИОН». Ссылка при копировании, цитировании, перепечатке любого фрагмента текста, изображения, скачиваемого документа обязательна.
+                    p Вся информация, представленная на сайте, носит ознакомительный характер, и не является офертой в понимании ст. 435 ГК РФ.
+            .footer-upside-right
+                .footer-upside-right-menu
+                    +footerDoubleColumnMenu(footerMenu)
+                .footer-upside-right-other
+                    img.footer-upside-right-other-logo(src='src/footerLogo.png')
+                    a.footer-upside-right-other-link(href='sale@anion-msk.ru') sale@anion-msk.ru
+                    .footer-upside-right-other-adress Москва, Муравская ул., д. 1
+                    .footer-upside-right-other-social
+                        each img in footerIcons
+                            +icon(img)
+        .footer-downside
+            p Разработка сайта –
+            img(src='src/letsrockLogo.svg')
+
+    .footer-mobile
+        .footer-main
+            .footer-telephones
+                a(href="tel:+74959892995").footer-telephone +7 (495) 989-29-95
+                a(href="tel:+78005055955").footer-telephone +7 (800) 505-59-55
+            .footer-menu
+                +footerSingleColumnMenu(footerMenu)
+            .footer-middle
+                img.footer-logo(src='src/footerLogo.png')
+                a.footer-link(href='sale@anion-msk.ru') sale@anion-msk.ru
+                .footer-adress Москва, Муравская ул., д. 1
+            .footer-social
+                each img in footerIcons
+                    +icon(img)
+        .footer-texts
+            p © 2003-2020 Все права принадлежат ООО «АНИОН». Ссылка при копировании, цитировании, перепечатке любого фрагмента текста, изображения, скачиваемого документа обязательна.
+            p Вся информация, представленная на сайте, носит ознакомительный характер, и не является офертой в понимании ст. 435 ГК РФ.
+        .footer-dev
+            p Разработка сайта –
+            img(src='src/letsrockLogo.svg')
